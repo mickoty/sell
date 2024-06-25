@@ -7,7 +7,7 @@ import sh1 from "../../assets/images/sh1.png";
 import sh2 from "../../assets/images/sh2.png";
 import sh3 from "../../assets/images/sh3.png";
 import axios from "axios";
-import { FaCheck, FaTimes } from "react-icons/fa";
+import { FaCheck, FaTimes, FaEdit } from "react-icons/fa";
 import { Link } from "react-router-dom";
 export default function Selldetails() {
   const params = useParams().id;
@@ -47,49 +47,45 @@ export default function Selldetails() {
       {houseDetails ? (
         // Render the component with the housedeatails data
         <div>
-       
-          <div className="container">
-            <section className="text-center p-5 second-section">
-         
-            
-              <div>
-                <h2 className="text-start mb-2"> listed properties</h2>{" "}
-                <section className="d-flex flex-column flex-md-row p-5 align-items-center fourth">
-                  <div className="col-md-6">
+          <div className="">
+            <section className="">
+              <div className="">
+                <h2 className=""> listed properties</h2>
+                <section className="container-details">
+                  <div className="img-contain">
                     <img
                       src={houseDetails.images[0]}
                       alt="Description"
                       className="img-fluid"
-                      width={500}
                     />
                   </div>
-                  <div className="col-md-6 mb-3 mb-md-0">
+                  <div className="list-card">
                     <h2> {houseDetails.title} </h2>{" "}
-                    <p className="mt-3">{houseDetails.location}</p>
-                    <span className="mt-3">
+                    <p className="">{houseDetails.location}</p>
+                    <div className="">
                       {houseDetails.furnished ? "Furnished" : "Not Furnished"}
-                    </span>
-                    <p className="mt-3">
-                      {convertDate(houseDetails.listingDate)}
-                    </p>
-                    <div className="d-flex border-top">
-                      <small className="flex-fill text-center border-end py-2">
+                    </div>
+                    <p className="">{convertDate(houseDetails.listingDate)}</p>
+                    <div className="ous-info">
+                      {" "}
+                      <small className="house-card house-card1">
+                        {houseDetails.bedrooms} bedroom
+                      </small>
+                      <small className="house-card house-card1 ">
+                        {houseDetails.bathrooms} bathrooms
+                      </small>
+                      <small className="house-card">
                         {houseDetails.size} sqt
                       </small>
-                      <small className="flex-fill text-center border-end py-2">
-                        {houseDetails.bedrooms} Beds
-                      </small>
-                      <small className="flex-fill text-center py-2">
-                        {houseDetails.bathrooms} Baths
-                      </small>{" "}
                     </div>{" "}
-                    <p className="mt-3">{houseDetails.ownersContact.phone}</p>{" "}
-                    <p className="mt-3">{houseDetails.price}</p>
-                    <Link to="/sell">
-                      <button className="btn mt-3" style={{ width: "200px" }}>
-                        back
-                      </button>
+                    <p className="">{houseDetails.ownersContact.phone}</p>{" "}
+                    <p className="">{houseDetails.price}</p>
+                    <Link className="listed-btn  " to="/sell">
+                      back
                     </Link>
+                    <div className="edit-Icon">
+                      <FaEdit />
+                    </div>
                   </div>
                 </section>
               </div>

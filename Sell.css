@@ -202,8 +202,59 @@
 .house-d {
   display: grid;
 }
+
 @media screen and (min-width: 900px) {
   .house-d {
     grid-template-columns: repeat(8, 1fr);
   }
+  .container-details {
+    grid-template-columns: auto 1fr;
+  }
+}
+.container-details {
+  display: grid;
+
+  gap: 1rem;
+}
+
+.img-contain {
+  width: 25rem;
+}
+.img-fluid {
+  height: 16rem;
+}
+.ous-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 17rem;
+  gap: 2px;
+}
+.house-card {
+  max-width: 6rem;
+}
+
+.house-card1 {
+  border-right: 1.5px solid black;
+}
+.listed-btn {
+  width: 100px;
+  height: 30px;
+  display: grid;
+  place-content: center;
+  border: 1px solid black;
+  justify-self: end;
+  color: blue;
+}
+.list-card {
+  display: grid;
+  height: 14rem;
+  align-self: center;
+  position: relative;
+}
+.list-card p {
+  margin: 0;
+}
+.edit-Icon {
+  position: absolute;
+  left: 33rem;
 }
