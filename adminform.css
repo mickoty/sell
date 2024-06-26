@@ -30,6 +30,10 @@ li a {
   border-radius: 50%;
   object-fit: cover;
 }
+.admin-info-con p {
+  text-align: center;
+  color: blue;
+}
 .nav-links:hover,
 .nav-icons:hover {
   background-color: blue;
@@ -54,71 +58,40 @@ li a:hover {
   color: white;
 }
 .nav-header {
-  width: 30vw;
+  width: 20vw;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   height: 100%;
   display: grid;
   justify-content: center;
 }
-.admin-header h3 {
-  text-align: center;
-  text-transform: capitalize;
-  margin-top: 1rem;
-}
-.admin-header {
-  text-transform: capitalize;
-  text-align: center;
-}
-.nav-center {
-  display: grid;
-}
-.nav-btn {
-  align-self: end;
-}
-.nav-btn button {
-  border: none;
-}
-.agent {
-  width: 70vw;
-  margin-top: 1rem;
-}
-.admin-info {
+
+.admin-form {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 4rem;
-}
-.admin-info-con img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  justify-self: end;
-}
-.admin-info-img {
-  width: 100%;
-  height: auto;
-  place-items: center;
-  display: grid;
-  grid-template-columns: auto auto;
-}
-.admin-info-img h3 {
-  justify-self: Start;
-}
-.admin-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
-.admin-info-side {
+.adminform-side {
+  margin-top: 3rem;
   display: grid;
+  width: 40rem;
 }
-.admin-info-btn {
-  width: 10rem;
-  height: 2rem;
-  justify-self: end;
-  align-self: end;
-  margin-right: 2rem;
+.adminFromE {
+  width: 30rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
-.admin-info-card {
-  max-width: 50%;
+.Adminform-cards {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.Adminform-cards input {
+  padding: 4px;
+  border: 2px solid black;
+  width: 95%;
+  border: 2px solid black;
+  border-radius: 5px;
 }

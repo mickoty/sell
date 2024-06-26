@@ -15,8 +15,9 @@ export default function box() {
     return (
       <section className="ag-list">
         <div className="listed-img">
-          <img src={sell3} alt="" srcset="" />
+          <img src={sell3} className="listed-photo" alt="" srcset="" />
         </div>
+        {/* the dummy data was plenty you can map and render it once */}
         <div className="listedInfo">
           <h3>semi-detached duplex</h3>
           <p>victoria island lagos </p>{" "}
@@ -116,11 +117,14 @@ export default function box() {
           <h3>view agent listed properties </h3>
           <div className="agent-v">
             <div className="agent-listing">
-              {RenderEle()} display grid to render more element
+              {RenderEle()}
+              {RenderEle()}
+              {RenderEle()} {RenderEle()}
+              {RenderEle()}
+              {RenderEle()}
             </div>
-
             <div className="agent-filter">
-              <div>
+              <div className="center-agent">
                 <div class="first-div">
                   <select>
                     <option value="">Location</option>

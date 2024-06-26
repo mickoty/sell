@@ -1,8 +1,8 @@
 import sell3 from "../../assets/images/sell3.png";
 import { FaHome, FaChartBar, FaUserAlt } from "react-icons/fa";
 import { TiSpanner } from "react-icons/ti";
-import "./admin-info.css";
-export default function AdminIn() {
+import "./adminform.css";
+export default function AdminForm() {
   const adminData = {
     username: "JohnDoe123",
     companyEmail: "john.doe@example.com",
@@ -14,8 +14,7 @@ export default function AdminIn() {
     adminId: "A001",
   };
   return (
-    <div className="admin-info">
-      {" "}
+    <div className="admin-form">
       <div className="nav-header">
         <nav className="nav-center">
           <div className="admin-header">
@@ -64,49 +63,49 @@ export default function AdminIn() {
           </div>
         </nav>
       </div>
-      <div className="admin-info-side">
+      <div className="adminform-side">
         <div className="admin-info-img">
           <h3>Admin</h3>{" "}
           <div className="admin-info-con">
-            <img src={sell3} alt="" srcset="" />
-          </div>{" "}
-         
-        </div>
-        <div className="admin-info-card">
-          <div className="admin-cards">
-            {" "}
-            <p>Username</p> <p>{adminData.username}</p>
-          </div>{" "}
-          <div className="admin-cards">
-            {" "}
-            <p>companyEmail</p> <p>{adminData.companyEmail}</p>
-          </div>{" "}
-          <div className="admin-cards">
-            {" "}
-            <p>Password</p> <p>{adminData.password}</p>
-          </div>{" "}
-          <div className="admin-cards">
-            {" "}
-            <p>language</p> <p>{adminData.language}</p>
-          </div>{" "}
-          <div className="admin-cards">
-            {" "}
-            <p>countary</p> <p>{adminData.country}</p>
-          </div>{" "}
-          <div className="admin-cards">
-            {" "}
-            <p>State</p> <p>{adminData.state}</p>
-          </div>{" "}
-          <div className="admin-cards">
-            {" "}
-            <p>mobile number</p> <p>{adminData.mobileNumber}</p>
-          </div>{" "}
-          <div className="admin-cards">
-            {" "}
-            <p>Admin ID</p> <p>{adminData.adminId}</p>
+            <img src={sell3} alt="" srcset="" /> <p>Edit</p>
           </div>{" "}
         </div>{" "}
-        <button className="admin-info-btn">Edit</button>
+        <form className="adminFromE">
+          <div className="Adminform-cards">
+            <label>Username:</label>
+            <input type="text" defaultValue={adminData.username} />
+          </div>
+          <div className="Adminform-cards">
+            <label>Company Email:</label>
+            <input type="email" defaultValue={adminData.companyEmail} />
+          </div>
+          <div className="Adminform-cards">
+            <label>Password:</label>
+            <input type="password" defaultValue={adminData.password} />
+          </div>
+          <div className="Adminform-cards">
+            <label>Language:</label>
+            <input type="text" defaultValue={adminData.language} />
+          </div>
+          <div className="Adminform-cards">
+            <label>Country:</label>
+            <input type="text" defaultValue={adminData.country} />
+          </div>
+          <div className="Adminform-cards">
+            <label>State:</label>
+            <input type="text" defaultValue={adminData.state} />
+          </div>
+          <div className="Adminform-cards">
+            <label>Mobile Number:</label>
+            <input type="tel" defaultValue={adminData.mobileNumber} />
+          </div>
+          <div className="Adminform-cards">
+            <label>Admin ID:</label>
+
+            <input type="tel" defaultValue={adminData.adminId} />
+          </div>
+        </form>{" "}
+        <button className="admin-info-btn">Save</button>
       </div>
     </div>
   );

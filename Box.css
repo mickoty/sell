@@ -6,6 +6,7 @@
 ul {
   list-style-type: none;
   padding: 0;
+  margin-top: 2rem;
 }
 .nav-icons {
   width: auto;
@@ -54,9 +55,9 @@ li a:hover {
   color: white;
 }
 .nav-header {
-  width: 20vw;
+  max-width: 20vw;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  height: calc(100vh - 70px);
+  height: 100%;
   display: grid;
   justify-content: center;
 }
@@ -68,9 +69,11 @@ li a:hover {
 .admin-header {
   text-transform: capitalize;
   text-align: center;
+  height: auto;
 }
 .nav-center {
   display: grid;
+  grid-template-rows: auto auto 1fr;
 }
 .nav-btn {
   align-self: end;
@@ -83,11 +86,11 @@ li a:hover {
   margin-top: 1rem;
 }
 .contact {
-  width: 100%;
+  max-width: 50rem;
   border: none;
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 3rem;
+  gap: 1rem;
 }
 .Agent-img img {
   width: 100px;
@@ -101,27 +104,50 @@ li a:hover {
 .agent-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 1rem;
+
   font-weight: bold;
 }
 .agent-listing {
   display: grid;
-  width: 25rem;
-  height: auto;
-  padding: 15px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  grid-template-columns: repeat(3, auto);
+  gap: 0.5rem;
+}
+.listed-img {
+  justify-self: center;
+}
+.listed-photo {
+  height: 6rem;
+  width: 13rem;
 }
 .ag-list {
   display: grid;
+  padding: 10px;
+  justify-self: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.listedInfo h3 {
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+.listedInfo p {
+  text-transform: capitalize;
+  font-size: 0.5rem;
+  margin-bottom: 0.4px;
+  margin-top: 0.3px;
+}
+.list-info {
+  font-size: 0.5rem;
 }
 .list-btn {
   background-color: blue;
   color: white;
-  width: 15rem;
-  height: 3rem;
+  width: 10rem;
+  height: 2rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border: none;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   text-transform: capitalize;
   border-radius: 4px;
   cursor: pointer;
@@ -139,23 +165,27 @@ li a:hover {
 }
 .agent-filter {
   background: rgba(217, 217, 217, 0.5);
-  padding: 30px; max-height: 15rem;
+  display: grid;
+  align-content: center;
+  max-height: 14rem;
+  width: 20rem;
+  padding: 0 1rem;
 }
+
 /* First div styles */
 .first-div {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  background: rgba(217, 217, 217, 0.5);
 
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .first-div select {
   width: 90%;
-  padding: 10px;
-  font-size: 16px;
+  padding: 6px;
+  font-size: 10px;
+  font-weight: bolder;
   background: white;
   border-radius: 10px;
 }
@@ -165,19 +195,17 @@ li a:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
-  background: rgba(217, 217, 217, 0.5);
 
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .second-div select {
-  width: 50%;
+  width: 90%;
   background: white;
-  font-size: 16px;
-
+  font-size: 10px;
+  padding: 6px;
   border-radius: 10px;
+  font-weight: bolder;
 }
 .price {
   margin-top: 1.5rem;
@@ -185,4 +213,5 @@ li a:hover {
 .agent-v {
   display: grid;
   grid-template-columns: 1fr auto;
+  gap: 2rem;
 }
